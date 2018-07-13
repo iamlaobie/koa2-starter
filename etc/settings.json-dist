@@ -1,0 +1,12 @@
+{
+  "mysql" : {
+    "host" : "127.0.0.1",
+    "user" : "root",
+    "password" : "******",
+    "database" : "your db name",
+    "multipleStatements": true,
+    "debug" : ["ComQueryPacket"]
+  },
+  "base": "",
+  "jwtSecret": "your jwt secret"
+}
