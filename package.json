@@ -1,0 +1,30 @@
+{
+  "name": "kao2-starter",
+  "version": "1.0.0",
+  "main": "api.js",
+  "author": "iamlaobie@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "2",
+    "cron": "^1.3.0",
+    "jsonwebtoken": "^8.3.0",
+    "koa": "^2.5.1",
+    "koa-body": "^2.5.0",
+    "koa-cors": "^0.0.16",
+    "koa-jwt": "^3.3.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "md5": "^2.2.1",
+    "moment": "^2.22.2",
+    "promise-mysql": "^3.2.1",
+    "randomatic": "^3.0.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3"
+  }
+}
