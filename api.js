@@ -4,11 +4,12 @@ const staticServer = require('koa-static')
 const router = require('koa-router')()
 const cors = require('@koa/cors')
 const jwt = require('koa-jwt')
+const argv = require('yargs').argv
 
 const { jwtSecret } = require('./etc/settings')
 
 const {
-  members, activities, users, attachments, vip, tradeLogs,
+  users, attachments,
 } = require('./routes')
 
 const app = new Koa()
@@ -33,22 +34,18 @@ app.use(koaBody({
 app.use(staticServer(`${__dirname}/webroot`))
 app.use(cors({ credentials: true }))
 
-app.use(async (ctx, next) => {
-  if (ctx.url.match(/^\/api\/users\/login/)) {
-    await users.login(ctx, next)
-  } else {
-    return next()
-  }
-})
-app.use(jwt({ secret: jwtSecret }))
+app.use(jwt({ secret: jwtSecret }).unless({ path: [ /^\/api\/users\/login/ ]}))
 app.use(users.init)
 
 router.get('/api/users', users.search)
 router.post('/api/users', users.save)
-
 router.post('/api/attachments/upload', attachments.upload)
-
 router.get('/api/currentUser', users.currentUser)
 
 app.use(router.routes())
-app.listen(8888)
+
+const port = argv.port || 8888
+app.listen(port)
+// eslint-disable-next-line
+console.log(`server start on port ${port} at ${(new Date().toISOString())}`)
+
