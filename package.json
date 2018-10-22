@@ -1,0 +1,57 @@
+{
+  "name": "his-gateway",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "刘军",
+  "email": "liujun@guangbao-uni.com",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "pm2 start",
+    "stop": "pm2 stop his-gateway",
+    "restart": "pm2 restart his-gateway",
+    "dev": "DEBUG=* supervisor node index.js",
+    "test": "jest --no-cache --coverage",
+    "eslint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "pre-commit": [
+    "eslint"
+  ],
+  "dependencies": {
+    "cron": "^1.3.0",
+    "debug": "^4.0.1",
+    "esm": "^3.0.84",
+    "koa": "^2.5.1",
+    "koa-body": "^2.5.0",
+    "koa-compose": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "mysql": "^2.16.0",
+    "randomatic": "^3.0.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "uuid": "^3.2.1",
+    "yargs": "^12.0.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-jest": "^23.2.0",
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.22.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "jest": "^23.6.0",
+    "pre-commit": "^1.2.2",
+    "supervisor": "^0.12.0"
+  }
+}

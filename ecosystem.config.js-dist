@@ -1,0 +1,15 @@
+module.exports = {
+  apps: [{
+    name: 'his-gateway',
+    script: './index.js',
+    args: '--port 9999', // 根据实际情况修改端口
+    env: {
+      NODE_ENV: 'production', // 开发环境下设置：development
+      DEBUG: '', // 开发环境设置：*
+    },
+    env_production: {
+      NODE_ENV: 'production',
+    },
+  }],
+};
+
