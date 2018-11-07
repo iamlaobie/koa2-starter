@@ -4,4 +4,4 @@ module.exports = {
   testPathIgnorePatterns: ['__tests__/[^/]*.js', 'node_modules'],
   globals: {
   },
-};
+}

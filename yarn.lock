@@ -2882,6 +2882,12 @@ has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hi-mysql@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/hi-mysql/-/hi-mysql-1.0.0.tgz#cbf44d8908144765b6a65a2d46f2e91b3fc38635"
+  dependencies:
+    mysql "^2.16.0"
+
 home-or-tmp@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/home-or-tmp/download/home-or-tmp-2.0.0.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8"

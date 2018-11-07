@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 require = require('esm')(module);
-const jestConfig = require('../jest.config');
 
+// eslint-disable-next-line
 module.exports = async function setup() {
-};
+}
