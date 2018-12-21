@@ -1,5 +1,5 @@
 {
-  "name": "his-gateway",
+  "name": "koa2-starter",
   "version": "1.0.0",
   "main": "index.js",
   "author": "刘军",
@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "start": "pm2 start",
-    "stop": "pm2 stop his-gateway",
-    "restart": "pm2 restart his-gateway",
+    "stop": "pm2 stop koa2-starter",
+    "restart": "pm2 restart koa2-starter",
     "dev": "DEBUG=* supervisor node index.js",
     "test": "jest --no-cache --coverage",
     "eslint": "eslint .",
